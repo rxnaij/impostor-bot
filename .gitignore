@@ -116,5 +116,5 @@ dist
 .pnp.*
 
 # App config files
-lib
+dist/
 src/config.json
