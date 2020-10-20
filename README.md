@@ -23,13 +23,13 @@ Visit the official [discord.js](https://discordjs.guide/) guide for an in-depth,
 1. Set up your application with Discord. (This is covered in the first few sections of the [discord.js guide](https://discordjs.guide/)).
 2. In the root directory, create a file named `.env`. Inside of it, insert the following code:
 `bot_token=your_discord_bot_token_goes_here`
-Of course, replace `your_discord_bot_token_goes_here` with the bot token supplied to you by Discord. 
+Replace `your_discord_bot_token_goes_here` with the bot token supplied to you by Discord. 
 
-### Compile TypeScript to JavaScript
+### Build and launch
 
-When you're ready to compile your `.ts` files to JavaScript, run the command: ```tsc```
+When you're ready to compile your `.ts` files to JavaScript, run the command ```npm build```.
 
-A `dist` folder will be created in the root directory, containing all of the files compiled to JavaScript.
+To start the app locally, run the command ```npm start```.
 
 
 
