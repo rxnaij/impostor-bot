@@ -1,6 +1,6 @@
 import { Message } from 'discord.js'
 
-export default interface Command {
+export interface Command {
     name: string,
     description: string,
     args: boolean,
