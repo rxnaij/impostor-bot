@@ -2,6 +2,7 @@ import fs from 'fs'
 import { Client, Collection } from 'discord.js'
 import { prefix } from './config.json'
 import { Command } from './lib/types/command'
+require('dotenv').config()
 
 // Create a new Discord client
 const client = new Client()
