@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { Client, Collection } from 'discord.js'
-import { prefix, token } from './config.json'
+import { prefix } from './config.json'
 import { Command } from './lib/types/command'
 
 // Create a new Discord client
@@ -49,4 +49,4 @@ client.on('message', (message) => {
 })
 
 // Log in to Discord using app's token
-client.login(token)
+client.login(process.env.bot_token)

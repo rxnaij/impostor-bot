@@ -117,4 +117,4 @@ dist
 
 # App config files
 dist/
-src/config.json
+.env
