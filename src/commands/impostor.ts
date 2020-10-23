@@ -7,6 +7,6 @@ module.exports = {
     args: false,
     usage: 'impostor',
     execute: (message: Message) => {
-      message.channel.send(`${message.author?.username} was ${Math.round(Math.random()) ? `not` : `` } an impostor.`)
+      message.channel.send(`${message.author?.username} was${Math.round(Math.random()) ? ` not` : `` } an impostor.`)
     },
 }

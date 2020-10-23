@@ -13,20 +13,14 @@ const commands = new Collection<string, Command>()
 const commandFiles = fs.readdirSync('./dist/commands/').filter(file => file.endsWith('.js')); // Returns an array of all <command>.js files in the ./commands folder
 for (const file of commandFiles) {
     const command: Command = require(`./commands/${file}`)
-    
-    console.log("Adding command:", command, command.name)
-    commands.set(command.name, command)
-    
-}   
-
-console.log("here are the commands:", commands)
+    commands.set(command.name, command)    
+}
 
 /**
  * Respond to command messages.
  * Commands take the form !<command> <rest of message>
  */
 client.on('message', (message) => {
-    console.log("message ", message.content)
     // Validate message content
     if (!message.content.startsWith(prefix) || message.author.bot) return   // Checks message for prefix and human author
     // Extract command message content
@@ -38,14 +32,14 @@ client.on('message', (message) => {
     const command = commands.get(commandName)
 
     // For commands that require arguments, validate that arguments exist
-    if (command && command.args && !args.length) return
+    // if (command?.args && !args.length) return
 
     // Run command
     try {
-        command && command.execute(message, args);
+        command?.execute(message, args)
     } catch (error) {
-        console.error(error);
-        message.reply('there was an error trying to execute that command!');
+        console.error(error)
+        message.reply('there was an error trying to execute that command!')
     }
 })
 
